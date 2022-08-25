@@ -1,0 +1,80 @@
+
+:root {
+    /*Dark variables*/
+    --main-dark-bg-color: #212529;
+    --main-dark-color: #FFFFFF;
+    --main-dark-bg-color-gray:#292B2E;
+
+    /* general */
+    --main-bg-color: #FFFFFF;
+    --main-color: #212529;
+    --main-active-color: #FFB742;
+}
+/* sobreescribo las variables cuando el active este en modo dark */
+:root.dark {
+    --main-bg-color: var(--main-dark-bg-color);
+    --main-color: var(--main-dark-color);
+}
+
+main{
+    flex-wrap: wrap;
+    flex-grow: 1;
+    display: flex;
+    margin: 0 auto;
+    width: 73%;
+}
+
+header a:visited, a:link{
+    color: var(--main-color);
+}
+
+header a:hover{
+    color: var(--main-active-color);
+}
+
+.div-main {
+    width: 45%;
+    flex-grow: 1;
+}
+
+.image{
+    width: 430px;
+    display: flex;
+    max-width: calc(100vw - 25px);
+}
+
+.whoIam{
+    background-color:#7B7B7B;
+    border-radius: 50px;
+    color: var(--main-active-color);
+    width: 98px;
+    height: 30px;
+}
+
+h1{
+    margin-left: 17px;
+    font-family: 'Roboto';
+    font-size: 48px;
+    margin-bottom: 36px;
+}
+
+.main__paragraph{
+    line-height: 30px;
+}
+
+
+@media (max-width:640px){
+    footer {
+        flex-direction: column;
+        height: fit-content;
+        background-color: #1C1C1C;
+    }
+
+    footer>*{
+        margin-bottom: 15px;
+    }
+    main{
+        width: 100%;
+        padding: 10px;
+    }
+}

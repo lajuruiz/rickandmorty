@@ -1,0 +1,189 @@
+html{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins';
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.header{
+    background-color: #72c7d0;
+    display: flex;
+    justify-content: space-between;
+    height:60px;
+}
+
+.title{
+    color:#233160;
+    margin: 20px;
+}
+
+.about-me{
+    padding: 2px;
+    background-color:#D7F2F2 ;
+    height: 26px;
+    width: 108px;
+    border-radius: 10px;
+    margin: 20px;
+    border: solid 1px white;
+}
+
+main{
+/*     flex-wrap: wrap; */
+    flex-grow: 1;
+}
+
+.box-1{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+}
+
+.box-1 h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #233160;
+    position: relative;
+}
+
+.box-1 p {
+    color:#233160;
+    position: relative;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #96C96A;
+}
+
+.list{ 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.list li {
+    display: inline-block;
+    padding: 20px;
+    font: 16px;
+}
+
+.nav{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #96C96A;
+}
+
+#box-blue{
+    background-color: #72c7d0;
+    padding: 0;
+}
+
+#box-blue p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.change-cv{
+    text-decoration: none;
+    color: #233160;
+}
+
+footer{
+    background-color:#96C96A;
+    display: flex;
+    justify-content: space-between;
+    height: 214px;
+    padding: 34px;
+    width: 100%;
+
+}
+
+.info-principle .name{
+    color: #FFFFFF;
+}
+
+.info-text{
+    font-size: 16px;
+    font-family: 'work Sans';
+    color: #D5FAB6;
+}
+
+p {
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.list-footer{
+    list-style: none;
+    font-size: 18px;
+}
+
+.a-color:link, .a-color:visited {
+    color:#D5FAB6 ;
+}
+
+.a-color:hover{
+    color: white;
+}
+
+.hire{
+    list-style: none;
+    color: #7B7B7B;
+    font-size:20px
+}
+
+.hire-me{
+    color:#FFFFFF;
+}
+
+.visit{
+    color:#D5FAB6 ;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+#link-a h2 {
+    color: #FFFFFF;
+}
+
+#link-a-social h2 {
+    color: #FFFFFF;
+}
+
+#link-a a:visited, a:link{
+    color:#D5FAB6 ;
+}
+
+#link-a-social a:visited, a:link{
+    color:#D5FAB6 ;
+}
+
+@media (max-width:640px){
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    footer>*{
+        margin-bottom: 15px;
+    }
+
+}

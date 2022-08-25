@@ -1,0 +1,219 @@
+:root {
+    /*Dark variables*/
+    --main-dark-bg-color: #212529;
+    --main-dark-color: #FFFFFF;
+    --main-dark-bg-color-gray:#292B2E;
+
+    /* general */
+    --main-bg-color: #FFFFFF;
+    --main-color: #212529;
+    --main-active-color: #FFB742;
+    --secundary-bg-color: aliceblue;
+}
+/* sobreescribo las variables cuando el active este en modo dark */
+:root.dark {
+    --main-bg-color: var(--main-dark-bg-color);
+    --secundary-bg-color: var(--main-dark-bg-color-gray);
+    --main-color: var(--main-dark-color);
+}
+
+html{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:var(--main-bg-color);
+    font-family:'Poppins';
+    color: var(--main-color);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 9px;
+}
+
+.image-header{
+    min-width: 91px;
+    max-height: 90px;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+li{
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited, a:link{
+    color: var(--main-bg-color)
+}
+
+a:hover{
+    color:#FFB742
+}
+
+.header__list{
+    font-weight: bold;
+    color: var(--main-bg-color);
+}
+
+header a:visited, a:link{
+    color: var(--main-color);
+}
+
+header a:hover{
+    color: var(--main-active-color);
+}
+
+button{
+    margin: 20px;
+    font-weight: 800;
+    height: 50px;
+    width: 187px;
+    background-color:var(--main-active-color);
+    color: black;
+    border-radius: 35px;
+    top: 23.060546875px;
+    padding: 12px, 26px, 12px, 26px;
+    left: 1271px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#button-change:active{
+    transform: scale(0.98);
+}
+
+
+footer{
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: space-between;
+    height: 214px;
+    margin-top: 115px;
+    padding: 34px;
+    width: 100%;
+}
+
+.info-text{
+    font-size: 16px;
+    font-family: 'work Sans';
+    color: #D4D4D4;
+}
+
+p {
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.list-footer{
+    list-style: none;
+    font-size: 18px;
+}
+
+.a-color:link, .a-color:visited {
+    color: #7c7c7c;
+}
+
+.a-color:hover{
+    color: white;
+}
+
+.hire{
+    list-style: none;
+    color: #7B7B7B;
+    font-size:20px
+}
+
+
+.footer-email-input{
+    display: flex;
+    background: #212529;
+    border-radius: 50px;
+    color: #7C7C7C;
+    height: 40px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.footer-email-input > input{
+    /* -10 px since we are adding a margin-left of 20 px therefoe 20/2 = 10*/
+    width: calc(100% - 40px - 10px);
+    margin-left: 20px;
+    height: 100%;
+    background: none;
+    color: #7B7B7B;
+    font-weight: 700;
+    line-height: 100%;
+    border: none;
+}
+
+.footer-email-input> input::placeholder{
+    color: #7B7B7B;
+}
+
+#link-a h2 {
+    color: var(--main-dark-color);
+}
+
+#link-a-social h2 {
+    color: var(--main-dark-color);
+}
+
+#link-a a:visited, a:link{
+    color: var(--main-dark-color);
+}
+
+#link-a-social a:visited, a:link{
+    color: var(--main-dark-color);
+}
+
+#link-a a:hover{
+    color:var(--main-active-color);
+}
+
+#link-a-social  a:hover{
+    color:var(--main-active-color);
+}
+
+input{
+    outline: none;
+}
+
+@media (max-width:640px){
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    footer>*{
+        margin-bottom: 15px;
+    }
+
+}

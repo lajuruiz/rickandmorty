@@ -1,0 +1,116 @@
+:root {
+    --women-dark-logo: url("../img/women_logo_white.png");
+    --women-light-logo: url("../img/women_logo_black.png");
+
+    /* default */
+
+    --women-logo: var(--women-dark-logo);
+}
+/* sobreescribo las variables cuando el active este en modo dark */
+:root.dark {
+    --women-logo: var(--women-light-logo);
+}
+
+.logo{
+    background-color: var(--main-color);
+}
+
+.button__menu{
+    width: 100px;
+    min-width: 53px;
+}
+
+.experience{
+    background-color:var(--main-dark-bg-color-gray);
+    border-radius: 50px;
+    color:var(--main-active-color);
+    width: 130px;
+    height: 40px;
+}
+
+
+.box-experience-information a {
+    text-decoration: underline;
+    color: var(--main-active-color);
+
+}
+
+.information-p{
+    color: var(--main-bg-color);
+}
+main{
+    font-family: "Inter";
+    text-align: center;
+    flex-grow: 1;
+}
+
+.title{
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 700;
+    margin-bottom: 50px
+}
+
+img.women-logo {
+    content: var(--women-logo);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.box-general{
+    width:360px;
+    height: 385px;
+    background-color:var(--main-color);
+    margin-right:60px ;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+.box-experience{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-experience-information{
+    margin: 17px 0 0 12px;
+    text-align: initial;
+}
+
+.box-experience-information h3{
+    margin-bottom: 10px;
+    color: var(--main-bg-color);
+    font-weight: bold;
+}
+
+.text{
+    color: var(--main-bg-color);
+}
+
+.box-experience img{
+    margin:25px;
+}
+.information{
+    text-align: initial;
+    margin: 20px 10px 20px 10px;
+    color:var(--main-bg-color);
+}
+.information a {
+    color: var(--main-bg-color);
+}
+@media (max-width:640px){
+    footer {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    footer>*{
+        margin-bottom: 15px;
+    }
+
+}
