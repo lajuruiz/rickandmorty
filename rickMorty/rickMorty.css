@@ -91,19 +91,20 @@ main{
     background-color: #96C96A;
 }
 
-#box-blue{
-    background-color: #72c7d0;
-    padding: 0;
-}
-
-#box-blue p{
-    font-size: 20px;
-    text-align: center;
-}
-
 .change-cv{
     text-decoration: none;
     color: #233160;
+}
+
+.important-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:18px;
+    background-color: #72c7d0;
+}
+
+#info-characteres{
+    padding: 10px;
 }
 
 footer{
