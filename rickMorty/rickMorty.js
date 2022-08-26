@@ -2,10 +2,33 @@
 //promesas dan flexibilidad y capacidad de control de llamadas a la api 
 //  se basa en un sistemas de peticiones y respuestas lo cual asegura que la comunicacion con el 
 //servidor sea siempre constante
-function characteres(gender, status){
+/* alert("por favor ir al menu y seleccionar lo que quieres ver ") */
+
+function nextPage(){
+    let queryParams = new URLSearchParams(window.location.search)
+    let url = window.location.pathname; //pathname es lo anterior al queryparams osea la url
+    let currentPage = 1
+
+    if(queryParams.get("page")){
+        currentPage = +queryParams.get("page")
+    }
+
+    // moving to next page
+    currentPage += 1
+
+    queryParams.set("page", currentPage)
+
+    window.location.href = `${url}?${queryParams}`;
+}
+
+function characteres(gender, status, page){
+    gender = gender || ""
+    status = status || ""
+    page = page || "1"
+
     const results = fetch(
         // using query params
-        `https://rickandmortyapi.com/api/character?gender=${gender || ""}&status=${status || ""}`
+        `https://rickandmortyapi.com/api/character?gender=${gender}&status=${status}&page=${page}`
     );
 
     //traducir mis datos a un json 
@@ -13,16 +36,16 @@ function characteres(gender, status){
         .then(response => response.json())
         //hago otro .then para obtener mis datos, llamo al callback para obtenerlos
         .then(data => {
-            data && data.results.forEach(personaje => {
+            document.querySelector(".important-cards").innerHTML = ""
+            data & data.results.forEach(personaje => {
                 // createRange: retorna un nuevo objeto
                 const article= document.createRange().createContextualFragment(/*html*/
                     `<article id="box-blue">
                         <div class="image-container">
+                            <h2>${personaje.name}</h2>
                             <img src="${personaje.image}" alt="Personaje">
                         </div>
-        
-                        <h2>${personaje.name}</h2>
-                        <span>${personaje.status}</span>
+                        <span>${personaje.gender}, ${personaje.status}</span>
                     </article>`
                 );
             
@@ -32,5 +55,6 @@ function characteres(gender, status){
         });
 }
 
-const params = new URLSearchParams(window.location.search) //me sirve para obtener los queryparams
-characteres(params.get("gender"), params.get("status"))
+const params = new URLSearchParams(window.location.search) 
+characteres(params.get("gender"), params.get("status"), params.get("page"))
+

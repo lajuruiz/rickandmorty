@@ -161,6 +161,22 @@ p {
     font-size: 14px;
 }
 
+.next{
+    padding: 2px;
+    background-color:#D7F2F2 ;
+    height: 26px;
+    width: 108px;
+    border-radius: 10px;
+    margin: 20px;
+    border: solid 1px white;
+    cursor: pointer;
+}
+
+.button-next{
+    display: flex;
+    justify-content: flex-end;
+}
+
 #link-a h2 {
     color: #FFFFFF;
 }
