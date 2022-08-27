@@ -96,15 +96,11 @@ main{
     color: #233160;
 }
 
-.important-cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:18px;
-    background-color: #72c7d0;
-}
+
 
 #info-characteres{
     padding: 10px;
+    margin: 20px;
 }
 
 footer{
@@ -192,6 +188,37 @@ p {
 #link-a-social a:visited, a:link{
     color:#D5FAB6 ;
 }
+
+#box-blue{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(131, 173, 208);
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.image-container{
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.image-container img{
+    border-radius: 40px;
+}
+
+.important-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:18px;
+    background-color: #72c7d0;
+}
+
+.button-next{
+    background-color: #72c7d0;
+}
+
 
 @media (max-width:640px){
     footer {
