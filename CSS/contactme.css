@@ -1,29 +1,9 @@
-:root {
-    /*Dark variables*/
-    --main-dark-bg-color: #212529;
-    --main-dark-color: #FFFFFF;
-    --main-dark-bg-color-gray:#7B7B7B;
-
-    /* general */
-    --main-bg-color: #FFFFFF;
-    --main-color: #212529;
-    --main-active-color: #FFB742;
-    --main-dark-bg:#292B2E;
-}
-/* sobreescribo las variables cuando el active este en modo dark */
-:root.dark {
-    --main-bg-color: var(--main-dark-bg-color);
-    --main-color: var(--main-dark-color);
-    --main-dark-bg:var(--main-dark-bg-color-gray);
-}
-
-
 input:focus {
     outline: none;
 }
 
 .button-smile{
-    background:  var(--main-dark-bg-color-gray);
+    background:  var(--secundary-bg-color);
     color: var(--main-active-color);
     font-size: 16px;
 }
@@ -42,7 +22,7 @@ main h3{
 .box-chiste{
     width:450px;/* fit-content(380px); */
     height: 350px;
-    background-color: aliceblue;
+    background-color: var(--secundary-bg-color);
     border-radius: 12px;
     margin: 0 auto;
 }
@@ -50,7 +30,7 @@ main h3{
 #chiste{
     display: flex;
     text-align: center;
-    color: black;
+    color: var(--main-color);
     font-size: 18px;
     font-family: 'Poppins';
     padding: 10px;
@@ -60,7 +40,7 @@ main h3{
 #respuesta{
     display: flex;
     text-align: center;
-    color: black;
+    color: var(--main-color);
     font-size: 18px;
     font-family: 'Poppins';
     padding: 10px;
@@ -105,7 +85,7 @@ main>form{
 
 
 ::placeholder{
-    color: white
+    color: var(--main-color);
 }
 
 .form__main input{
@@ -119,20 +99,20 @@ main>form{
 
 .form__main input[type=text] {
     width: 370px;
-    background-color: #212529;
+    background-color: var(--secundary-bg-color);
     border-bottom: 2px solid #676767;
     font-size: 20px;
     font-family:'Poppins';
-    color: white;
+    color: var(--main-color);
 }
 
 .form__main input[type=number]{
     width: 370px;
-    background-color: #212529;
+    background-color: var(--secundary-bg-color);
     border-bottom: 2px solid #676767;
     font-size: 20px;
     font-family:'Poppins';
-    color: white;
+    color: var(--main-color);
 }
 
 .contact{
@@ -140,7 +120,7 @@ main>form{
     margin: 35px;
     font-weight: 800;
     width: 160px;
-    background:var(--main-dark-bg-color-gray);
+    background:var(--secundary-bg-color);
     color: #FFB742;
     border-radius: 35px;
     top: 23.060546875px;
@@ -171,5 +151,3 @@ main>form{
     }
 
 }
-
-

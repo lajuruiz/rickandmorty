@@ -4,6 +4,11 @@
 //servidor sea siempre constante
 /* alert("por favor ir al menu y seleccionar lo que quieres ver ") */
 
+/* window.addEventListener('DOMContentLoaded',function(){
+   let info= querySelector(".important-cards").innerHTML="";
+})
+ */
+
 function nextPage(){
     let queryParams = new URLSearchParams(window.location.search)
     let url = window.location.pathname; //pathname es lo anterior al queryparams osea la url
@@ -25,6 +30,7 @@ function characteres(gender, status, page){
     gender = gender || ""
     status = status || ""
     page = page || "1"
+
 
     const results = fetch(
         // using query params
