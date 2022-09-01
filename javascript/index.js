@@ -7,3 +7,6 @@ function changeColor(){
     let html=document.querySelector("html")
     html.classList.toggle("dark");
 }
+
+
+

@@ -39,27 +39,40 @@ body{
 }
 
 main{
-/*     flex-wrap: wrap; */
     flex-grow: 1;
 }
 
 .box-1{
     display: flex;
-    flex-direction: row;
     background-color: #FFFFFF;
 }
-
-.box-1 h1{
+.text-rick{
+    padding-right: 180px;
+}
+.text-rick h1{
+    color: #233160;
+    font-weight: bold;
+    font-size: 32px;
     margin-top: 30px;
     margin-bottom: 30px;
-    color: #233160;
-    position: relative;
 }
 
-.box-1 p {
+.text-rick p {
     color:#233160;
-    position: relative;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 22px;
 }
+
+.rick{
+    width: 452px;
+    height: 351px;
+    margin-top: 25px;
+    margin-left: 116px;
+}
+
+
+
 
 .menu{
     width: 100%;
@@ -77,7 +90,6 @@ main{
 .list li {
     display: inline-block;
     padding: 20px;
-    font: 16px;
 }
 
 .nav{
@@ -141,6 +153,15 @@ p {
     color: white;
 }
 
+.nav:hover{
+    color: #233160;
+}
+
+.a-color{
+    text-decoration: none;
+}
+
+
 .hire{
     list-style: none;
     color: #7B7B7B;
@@ -181,39 +202,67 @@ p {
     color: #FFFFFF;
 }
 
-#link-a a:visited, a:link{
-    color:#D5FAB6 ;
-}
-
-#link-a-social a:visited, a:link{
-    color:#D5FAB6 ;
-}
-
-#box-blue{
-    width: 350px;
-    height: 400px;
-    background-color: rgb(131, 173, 208);
-    text-align: center;
-    margin: auto;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.image-container{
-    padding: 20px;
-    justify-content: space-between;
-}
-
-.image-container img{
-    border-radius: 40px;
-}
 
 .important-cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap:18px;
-    background-color: #72c7d0;
+    background-color:#72c7d0;
+    align-items: center;
 }
+
+.image-container{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D7F2F2;
+    width:300px;
+    height: 510px;
+    border-radius: 20px;
+}
+
+.characters{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 250px;
+    width: 246px;
+    border-radius: 15px;
+}
+
+.characters img{
+    height: 250px;
+    width: 246px;
+    border-radius: 15px;
+}
+
+.tittle-h2{
+    color: #233160;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+
+#info-gender{
+    background-color: #96C96A;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 3px 20px;
+    border-radius: 30px;
+}
+ 
+#info-status{
+    color: #233160;
+    text-align: center;
+    
+}
+
 
 .button-next{
     background-color: #72c7d0;

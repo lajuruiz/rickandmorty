@@ -48,10 +48,13 @@ function characteres(gender, status, page){
                 const article= document.createRange().createContextualFragment(/*html*/
                     `<article id="box-blue">
                         <div class="image-container">
-                            <h2>${personaje.name}</h2>
-                            <img src="${personaje.image}" alt="Personaje">
-                        </div>
-                        <span>${personaje.gender}, ${personaje.status}</span>
+                            <h2 class="tittle-h2">${personaje.name}</h2>
+                            <div class="characters" >
+                                <img src="${personaje.image}" alt="Personaje">
+                            </div>
+                            <span id="info-gender">${personaje.gender}</span> 
+                            <span id="info-status">${personaje.status}</span>
+                        </div>   
                     </article>`
                 );
             

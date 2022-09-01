@@ -61,9 +61,7 @@ nav li{
     margin-left: 10px;
 }
 
-li{
-    margin-right: 20px;
-}
+
 
 a{
     text-decoration: none;
@@ -80,6 +78,11 @@ a:hover{
 .header__list{
     font-weight: bold;
     color: var(--main-bg-color);
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 header a:visited, a:link{
@@ -206,6 +209,27 @@ input{
     outline: none;
 }
 
+#menu {
+    display: flex;
+    flex: 1;
+}
+
+/* menu hamburguesa */
+#icono-menu {
+    width:50px;
+
+}
+.checkbtn{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: none;
+}
+
+
 @media (max-width:640px){
     footer {
         flex-direction: column;
@@ -215,5 +239,13 @@ input{
     footer>*{
         margin-bottom: 15px;
     }
+}
 
+@media(max-width:750px){
+    .checkbtn{
+        display: block;
+    }
+    .header__list{
+        display: none;
+    }
 }
