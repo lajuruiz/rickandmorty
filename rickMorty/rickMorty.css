@@ -48,6 +48,7 @@ main{
 }
 .text-rick{
     padding-right: 180px;
+    text-align: justify;
 }
 .text-rick h1{
     color: #233160;
@@ -65,13 +66,12 @@ main{
 }
 
 .rick{
-    width: 452px;
+    align-self: self-end;
+    /* width: 452px;
     height: 351px;
     margin-top: 25px;
-    margin-left: 116px;
+    margin-left: 116px; */
 }
-
-
 
 
 .menu{
@@ -178,7 +178,7 @@ p {
     font-size: 14px;
 }
 
-.next{
+.pag-button{
     padding: 2px;
     background-color:#D7F2F2 ;
     height: 26px;
@@ -189,9 +189,10 @@ p {
     cursor: pointer;
 }
 
-.button-next{
+.pagination-button-container{
     display: flex;
     justify-content: flex-end;
+    background-color: #72c7d0;
 }
 
 #link-a h2 {
@@ -204,12 +205,15 @@ p {
 
 
 .important-cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap:18px;
-    background-color:#72c7d0;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 18px;
+    background-color: #72c7d0;
 }
+
 
 .image-container{
     margin-top: 20px;
@@ -262,12 +266,6 @@ p {
     text-align: center;
     
 }
-
-
-.button-next{
-    background-color: #72c7d0;
-}
-
 
 @media (max-width:640px){
     footer {
