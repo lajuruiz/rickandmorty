@@ -1,4 +1,3 @@
-
 //promesas dan flexibilidad y capacidad de control de llamadas a la api 
 //  se basa en un sistemas de peticiones y respuestas lo cual asegura que la comunicacion con el 
 //servidor sea siempre constante
@@ -40,6 +39,7 @@ function renderCharacteres(gender, status, page){
         });
 }
 
+<<<<<<< HEAD
 
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
@@ -69,4 +69,34 @@ function init(){
     const params = new URLSearchParams(window.location.search) 
     renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
 }
+=======
+>>>>>>> c00e531 (cambios en experiencia)
 
+function renderCharacter(character) {
+    // createRange: retorna un nuevo objeto
+    const article= document.createRange().createContextualFragment(/*html*/
+        `<article id="box-blue">
+            <div class="image-container">
+                <h2 class="tittle-h2">${character.name}</h2>
+                <div class="characters" >
+                    <img src="${character.image}" alt="Personaje">
+                </div>
+                <span id="info-gender">${character.gender}</span> 
+                <span id="info-status">${character.status}</span>
+            </div>   
+        </article>`
+    )
+
+    return article
+}
+
+/* 
+let texto=document.getElementById("all")
+texto.addEventListener("click",init)
+ */
+
+function init(){
+/*     let b=document.getElementById("messages").innerHTML= ""  */
+    const params = new URLSearchParams(window.location.search) 
+    renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
+}
