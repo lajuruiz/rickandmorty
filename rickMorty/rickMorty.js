@@ -39,8 +39,6 @@ function renderCharacteres(gender, status, page){
         });
 }
 
-<<<<<<< HEAD
-
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
     const article= document.createRange().createContextualFragment(/*html*/
@@ -58,19 +56,12 @@ function renderCharacter(character) {
 
     return article
 }
-
-/* 
-let texto=document.getElementById("all")
-texto.addEventListener("click",init)
- */
 
 function init(){
 /*     let b=document.getElementById("messages").innerHTML= ""  */
     const params = new URLSearchParams(window.location.search) 
     renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
 }
-=======
->>>>>>> c00e531 (cambios en experiencia)
 
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
@@ -90,13 +81,8 @@ function renderCharacter(character) {
     return article
 }
 
-/* 
-let texto=document.getElementById("all")
-texto.addEventListener("click",init)
- */
 
 function init(){
-/*     let b=document.getElementById("messages").innerHTML= ""  */
     const params = new URLSearchParams(window.location.search) 
     renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
 }
