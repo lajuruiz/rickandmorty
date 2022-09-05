@@ -100,9 +100,7 @@ section{
     margin: 20px 10px 20px 10px;
     color:var(--main-bg-color);
 }
-.information a {
-    color: var(--main-bg-color);
-}
+
 @media (max-width:640px){
     footer {
         flex-direction: column;
