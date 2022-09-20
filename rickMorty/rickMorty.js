@@ -1,4 +1,3 @@
-
 //promesas dan flexibilidad y capacidad de control de llamadas a la api 
 //  se basa en un sistemas de peticiones y respuestas lo cual asegura que la comunicacion con el 
 //servidor sea siempre constante
@@ -40,7 +39,6 @@ function renderCharacteres(gender, status, page) {
         });
 }
 
-
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
     const article = document.createRange().createContextualFragment(/*html*/
@@ -59,6 +57,7 @@ function renderCharacter(character) {
     return article
 }
 
+<<<<<<< HEAD
 
 function init() {
     const params = new URLSearchParams(window.location.search)
@@ -81,5 +80,34 @@ function init() {
         // Monstrar mensaje inicial
     }
     
+=======
+function init(){
+/*     let b=document.getElementById("messages").innerHTML= ""  */
+    const params = new URLSearchParams(window.location.search) 
+    renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
+>>>>>>> 560cdbb8fead95cbdb5e7d87ca85d425ca0cadbd
 }
 
+function renderCharacter(character) {
+    // createRange: retorna un nuevo objeto
+    const article= document.createRange().createContextualFragment(/*html*/
+        `<article id="box-blue">
+            <div class="image-container">
+                <h2 class="tittle-h2">${character.name}</h2>
+                <div class="characters" >
+                    <img src="${character.image}" alt="Personaje">
+                </div>
+                <span id="info-gender">${character.gender}</span> 
+                <span id="info-status">${character.status}</span>
+            </div>   
+        </article>`
+    )
+
+    return article
+}
+
+
+function init(){
+    const params = new URLSearchParams(window.location.search) 
+    renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
+}
