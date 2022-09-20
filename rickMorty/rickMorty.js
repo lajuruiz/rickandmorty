@@ -5,12 +5,12 @@
 /* alert("por favor ir al menu y seleccionar lo que quieres ver ") */
 window.addEventListener('DOMContentLoaded', init)
 
-function changePage(counter = 1){
+function changePage(counter = 1) {
     let queryParams = new URLSearchParams(window.location.search)
     let url = window.location.pathname; //pathname es lo anterior al queryparams osea la url
     let currentPage = 1
 
-    if(queryParams.get("page")){
+    if (queryParams.get("page")) {
         currentPage = +queryParams.get("page")
     }
 
@@ -22,7 +22,7 @@ function changePage(counter = 1){
     // renderCharacteres(queryParams.get("gender"), queryParams.get("status"), currentPage);
 }
 
-function renderCharacteres(gender, status, page){
+function renderCharacteres(gender, status, page) {
     gender = gender || ""
     status = status || ""
     page = page || 1
@@ -33,8 +33,8 @@ function renderCharacteres(gender, status, page){
         .then(response => response.json())   //traducir mis datos a un json 
         //hago otro .then para obtener mis datos, llamo al callback para obtenerlos
         .then(data => {
-            const container=document.querySelector(".important-cards")
-            container.innerHTML = "" 
+            const container = document.querySelector(".important-cards")
+            container.innerHTML = ""
 
             data & data.results.forEach(character => container.append(renderCharacter(character)))
         });
@@ -43,7 +43,7 @@ function renderCharacteres(gender, status, page){
 
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
-    const article= document.createRange().createContextualFragment(/*html*/
+    const article = document.createRange().createContextualFragment(/*html*/
         `<article id="box-blue">
             <div class="image-container">
                 <h2 class="tittle-h2">${character.name}</h2>
@@ -59,14 +59,27 @@ function renderCharacter(character) {
     return article
 }
 
-/* 
-let texto=document.getElementById("all")
-texto.addEventListener("click",init)
- */
 
-function init(){
-/*     let b=document.getElementById("messages").innerHTML= ""  */
-    const params = new URLSearchParams(window.location.search) 
-    renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
+function init() {
+    const params = new URLSearchParams(window.location.search)
+    let entry;
+
+    let tienePagina = false;
+
+    for (entry of params.entries()) {
+
+        if (entry[0] === 'page') {
+            tienePagina = true;
+        }
+
+        console.log(entry)
+    }
+
+    if (tienePagina) {
+        renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
+    } else {
+        // Monstrar mensaje inicial
+    }
+    
 }
 
