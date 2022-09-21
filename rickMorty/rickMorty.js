@@ -32,35 +32,20 @@ function renderCharacteres(gender, status, page){
         .then(response => response.json())   //traducir mis datos a un json 
         //hago otro .then para obtener mis datos, llamo al callback para obtenerlos
         .then(data => {
-            const container=document.querySelector(".important-cards")
+            const container = document.querySelector(".important-cards")
             container.innerHTML = "" 
 
             data & data.results.forEach(character => container.append(renderCharacter(character)))
         });
 }
 
-function renderCharacter(character) {
-    // createRange: retorna un nuevo objeto
-    const article= document.createRange().createContextualFragment(/*html*/
-        `<article id="box-blue">
-            <div class="image-container">
-                <h2 class="tittle-h2">${character.name}</h2>
-                <div class="characters" >
-                    <img src="${character.image}" alt="Personaje">
-                </div>
-                <span id="info-gender">${character.gender}</span> 
-                <span id="info-status">${character.status}</span>
-            </div>   
-        </article>`
-    )
-
-    return article
-}
-
 function init(){
     const params = new URLSearchParams(window.location.search)
 
     if (Array.from(params.keys()).length) {
+        const container=document.querySelector(".important-cards")
+        container.innerHTML = '<img class="rick loading" src="./img/image 10.png">' 
+
         renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
     } else {
         let arrowContainer = document.querySelector(".pagination-button-container")
@@ -73,16 +58,14 @@ function init(){
 function renderCharacter(character) {
     // createRange: retorna un nuevo objeto
     const article= document.createRange().createContextualFragment(/*html*/
-        `<article id="box-blue">
-            <div class="image-container">
-                <h2 class="tittle-h2">${character.name}</h2>
-                <div class="characters" >
-                    <img src="${character.image}" alt="Personaje">
-                </div>
-                <span id="info-gender">${character.gender}</span> 
-                <span id="info-status">${character.status}</span>
-            </div>   
-        </article>`
+        `<div class="image-container">
+            <h2 class="tittle-h2">${character.name}</h2>
+            <div class="characters" >
+                <img src="${character.image}" alt="Personaje">
+            </div>
+            <span id="info-gender">${character.gender}</span> 
+            <span id="info-status">${character.status}</span>
+        </div>`
     )
 
     return article

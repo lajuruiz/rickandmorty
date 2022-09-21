@@ -20,7 +20,8 @@ body{
     background-color: #72c7d0;
     display: flex;
     justify-content: space-between;
-    height:60px;
+    min-height:60px;
+    height: fit-content;
 }
 
 .title{
@@ -31,7 +32,8 @@ body{
 .about-me{
     padding: 2px;
     background-color:#D7F2F2 ;
-    height: 26px;
+    min-height: 26px;
+    height: fit-content;
     width: 108px;
     border-radius: 10px;
     margin: 20px;
@@ -45,9 +47,12 @@ main{
 .box-1{
     display: flex;
     background-color: #FFFFFF;
+    justify-content: center;
 }
 .text-rick{
-    padding-right: 180px;
+    max-width: 500px;
+    padding-right: 5px;
+    padding-left: 5px;
     text-align: justify;
 }
 .text-rick h1{
@@ -67,20 +72,21 @@ main{
 
 .rick{
     align-self: self-end;
-    /* width: 452px;
-    height: 351px;
-    margin-top: 25px;
-    margin-left: 116px; */
+    max-width: 100%;
 }
 
 
 .menu{
     width: 100%;
-    height: 50px;
+    min-height: 50px;
+    height: fit-content;
     background-color: #96C96A;
 }
 
 .list{ 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -100,11 +106,6 @@ main{
     color: #FFFFFF;
 }
 
-.menu{
-    width: 100%;
-    height: 50px;
-    background-color: #96C96A;
-}
 
 .change-cv{
     text-decoration: none;
@@ -228,13 +229,13 @@ p {
 }
 
 .image-container{
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #D7F2F2;
     width:300px;
+    max-width: calc(100% - 40px);
     height: 510px;
     border-radius: 20px;
 }
@@ -243,14 +244,14 @@ p {
     display: flex;
     justify-content: center;
     background-color: white;
-    height: 250px;
     width: 246px;
+    max-width: 100%;
     border-radius: 15px;
 }
 
 .characters img{
-    height: 250px;
     width: 246px;
+    max-width: 100%;
     border-radius: 15px;
 }
 
@@ -286,12 +287,41 @@ p {
     footer>*{
         margin-bottom: 15px;
     }
-
-    .box-1{
-        width: 100%;
-        padding: 10px;
-    }
-
 }
 
 
+@media (max-width:700px){
+    .box-1{
+         flex-flow: column-reverse;
+         align-items: center;
+    }
+
+    .rick {
+        align-self: center;
+    }
+}
+
+/* Animation */
+
+.rick.loading{
+    border-radius: 100%;
+    margin: 30px;
+}
+
+.loading {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
