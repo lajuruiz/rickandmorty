@@ -59,19 +59,13 @@ function renderCharacter(character) {
 
 function init(){
     const params = new URLSearchParams(window.location.search)
-    let entry;
-    let tienePagina = false;
 
-    for (entry of params.entries()) {
-        if (entry[0] === 'page') {
-            tienePagina = true;
-        }
-        console.log(entry)
-    }
-    if (tienePagina) {
+    if (Array.from(params.keys()).length) {
         renderCharacteres(params.get("gender"), params.get("status"), params.get("page"))
     } else {
-        // Monstrar mensaje inicial
+        let arrowContainer = document.querySelector(".pagination-button-container")
+        arrowContainer.style.display = "none"
+    
     }
 }
 
