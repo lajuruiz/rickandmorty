@@ -212,11 +212,14 @@ p {
     justify-content: center;
     gap: 18px;
     background-color: #72c7d0;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .message{
-    text-align: center;
-    margin: 117px;
+    display: flex;
+    justify-content: center;
+    margin: 134px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -284,4 +287,11 @@ p {
         margin-bottom: 15px;
     }
 
+    .box-1{
+        width: 100%;
+        padding: 10px;
+    }
+
 }
+
+
