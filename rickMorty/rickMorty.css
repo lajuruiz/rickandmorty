@@ -86,6 +86,7 @@ main{
     padding: 0;
     flex: 1;
     display: flex;
+    justify-content: space-around;
 }
 
 
@@ -192,7 +193,7 @@ p {
 
 .pagination-button-container{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: #72c7d0;
 }
 
