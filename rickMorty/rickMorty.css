@@ -208,14 +208,21 @@ p {
 
 .important-cards{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    align-content: center;
     gap: 18px;
     background-color: #72c7d0;
 }
 
+.message{
+    text-align: center;
+    margin: 117px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: white;
+}
 
 .image-container{
     margin-top: 20px;
